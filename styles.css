@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
+
+:root {
+    /* ## Colors */
+    --GrayishBlue: hsl(237, 18%, 59%);
+    --SoftRed: hsl(345, 95%, 68%);
+
+    --White: hsl(0, 0%, 100%);
+    --DarkDesaturatedBlue: hsl(236, 21%, 26%);
+    --DarkBlue: hsl(235, 16%, 14%);
+    --VeryDarkBlue: hsl(234, 17%, 12%);
+}
+
+*, html{
+    box-sizing: border-box;
+}
+
+body {
+    width: 95%;
+    font-family: "Red Hat Text";
+    font-size: 14px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/images/bg-stars.svg'), radial-gradient(var(--VeryDarkBlue), var(--DarkBlue));
+}
+
+.main-content {
+    width: 75%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome-message {
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--White);
+    letter-spacing: 7px;
+    font-weight: 500;
+    margin-bottom: 7rem;
+}
+
+.counter-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.counter-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.timer-value-wrapper {
+    height: 12rem;
+    width: 12rem;
+    background-color: var(--VeryDarkBlue);
+    border-radius: .5rem;
+    z-index: 1;
+}
+
+.timer-value {
+    color: var(--SoftRed);
+    font-size: 7rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+    height: 11rem;
+    width: 11.5rem;
+    margin: 5px;
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.flip-up {
+    position: absolute;
+    top: 0;
+    height: 5.5rem;
+    width: 12rem;
+    background-color: var(--DarkDesaturatedBlue);
+    opacity: 90%;
+    border-radius: .5rem;
+    z-index: -1;
+    border: 1px solid black;
+}
+
+.flip-down {
+    position: absolute;
+    top: 5.5rem;
+    height: 5.5rem;
+    width: 12rem;
+    background-color: var(--DarkDesaturatedBlue);
+    opacity: 90%;
+    border-radius: .5rem;
+    border: 1px solid black;
+    z-index: -1;
+}
+
+.timer-label {
+    color: var(--GrayishBlue);
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 5px;
+}
+
+.footer-wrapper {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 170px;
+    padding-bottom: 10px;
+    background-image: url('./images/pattern-hills.svg');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+.footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.sm-icons-wrapper {
+    margin-bottom: 2rem;
+}
+
+.sm-icons-wrapper a {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.social-icon:hover {
+    filter: invert(57%) sepia(27%) saturate(5240%) hue-rotate(311deg) brightness(102%) contrast(97%);
+
+}
+
+.attribution {
+    color: var(--GrayishBlue);
+}
+
+.attribution a {
+    color: var(--White);
+}
+
+@media only screen and (max-width:375px) {
+    .main-content {
+        width: 95%;
+        height: 80vh;
+    }
+
+    .welcome-message{
+        font-size: 1.2rem;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .counter-wrapper{
+        width: ;
+    }
+
+    .timer-value-wrapper {
+        height: 4.5rem;
+        width: 4.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .timer-value {
+        font-size: 2.2rem;
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .flip-down, .flip-up{
+        height: 2.1rem;
+        width: 4.5rem;
+        border-radius: .2rem;
+    }
+
+    .flip-down{
+        top: 2.1rem;
+    }
+
+    .timer-label{
+        font-size: .6rem;
+        letter-spacing: 1px;
+    }
+
+    .footer-wrapper{
+        height: 170px;
+        padding-bottom: 0;
+        background-image: url('./images/pattern-hills.svg');
+        background-size: 250% auto;
+        background-position: bottom center;
+        background-repeat: no-repeat;
+    }
+
+    .sm-icons-wrapper {
+        padding-bottom: 15px;
+        margin-bottom: 0;
+    }
+}

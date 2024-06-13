@@ -1,31 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="./styles.css">
+  <script src="counter.js" defer></script>
+
   <title>Frontend Mentor | Launch countdown timer</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
+  <main class="main-content">
+    <h1 id="welcome-message" class="welcome-message">
+      We're launching soon
+    </h1>
 
-  We're launching soon
+    <div class="counter-wrapper">
 
-  Days
-  Hours
-  Minutes
-  Seconds
+      <div class="c-days counter-item">
+        <div class="timer-value-wrapper">
+          <div class="flip-up"></div>
+          <div class="flip-down"></div>
+          <p id="days-value" class="timer-value">
+            15
+          </p>
+        </div>
+        <p id="days-label" class="timer-label">
+          Days
+        </p>
+      </div>
+
+      <div class="c-hours counter-item">
+        <div class="timer-value-wrapper">
+          <div class="flip-up"></div>
+          <div class="flip-down"></div>
+          <p id="hours-value" class="timer-value">
+            0
+          </p>
+        </div>
+        <p id="hours-label" class="timer-label">
+          Hours
+        </p>
+      </div>
+
+      <div class="c-minutes counter-item">
+        <div class="timer-value-wrapper">
+          <div class="flip-up"></div>
+          <div class="flip-down"></div>
+          <p id="minutes-value" class="timer-value">
+            45
+          </p>
+        </div>
+        <p id="minutes-label" class="timer-label">
+          Minutes
+        </p>
+      </div>
+
+      <div class="c-seconds counter-item">
+        <div class="timer-value-wrapper">
+          <div class="flip-up"></div>
+          <div class="flip-down"></div>
+          <p id="seconds-value" class="timer-value">
+            0
+          </p>
+        </div>
+        <p id="seconds-label" class="timer-label">
+          Seconds
+        </p>
+    </div>
+  </main>
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  <div class="footer-wrapper">
+    <div class="footer">
+      <div class="sm-icons-wrapper">
+        <a href="https://www.facebook.com/janos.berke.9" class="social-media-link">
+          <img src="./images/icon-facebook.svg" alt="facebook-icon" class="social-icon">
+        </a>
+        <a href="https://hu.pinterest.com/" class="social-media-link">
+          <img src="./images/icon-pinterest.svg" alt="pinterest-icon" class="social-icon">
+        </a>
+        <a href="https://www.instagram.com/janosberke/" class="social-media-link">
+          <img src="./images/icon-instagram.svg" alt="instagram-icon" class="social-icon">
+        </a>
+      </div>
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="https://www.linkedin.com/in/janos-berke5/">Berke Janos</a>.
+      </div>
+    </div>
   </div>
 </body>
+
 </html>
